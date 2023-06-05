@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container } from "reactstrap";
 import Header from "./components/Header/Header";
@@ -21,21 +21,26 @@ const carouselImages = [
 ];
 
 function App() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <Router>
       <Header welcomeMessage="Bem-vindo ao Shopping Futuro" />
       <CarouselShopping images={carouselImages} />
       <Container>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/loja1" element={<Loja1 />} />
-          <Route path="/loja2" element={<Loja2 />} />
-          <Route path="/loja3" element={<Loja3 />} />
-          <Route path="/loja4" element={<Loja4 />} />
-          <Route path="/loja5" element={<Loja5 />} />
-          <Route path="/loja6" element={<Loja6 />} />
-        </Routes>
-        <FormCadastro />
+        {submitted ? (
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/loja1" element={<Loja1 />} />
+            <Route path="/loja2" element={<Loja2 />} />
+            <Route path="/loja3" element={<Loja3 />} />
+            <Route path="/loja4" element={<Loja4 />} />
+            <Route path="/loja5" element={<Loja5 />} />
+            <Route path="/loja6" element={<Loja6 />} />
+          </Routes>
+        ) : (
+          <FormCadastro setSubmitted={setSubmitted} />
+        )}
       </Container>
       <Footer />
     </Router>

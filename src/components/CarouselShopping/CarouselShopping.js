@@ -4,6 +4,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import './CarouselShopping.css';
 
+
 // Aqui, temos a função CarouselShopping que representa nosso componente.
 // Ela recebe as 'props', que são como argumentos para nossa função.
 function CarouselShopping(props) {
