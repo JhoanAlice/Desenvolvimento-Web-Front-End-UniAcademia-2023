@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "nome": "a",
+      "email": "fortnite@gmail.com",
+      "cpf": "12414142141",
+      "idade": "21",
+      "whatsapp": "989898989898",
+      "id": 1
+    },
+    {
+      "nome": "zacarias",
+      "email": "zedamanga@gmail.com",
+      "cpf": "12414142141",
+      "idade": "232",
+      "whatsapp": "989898989898",
+      "id": 2
+    }
+  ]
+}

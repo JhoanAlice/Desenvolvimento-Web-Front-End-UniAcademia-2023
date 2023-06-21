@@ -1,7 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Form, FormGroup, Label, Input, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import './FormCadastro.css';
+import axios from 'axios';
 
+
+const API_URL = 'http://localhost:3000';
+
+const saveFormData = async (data) => {
+  try {
+    console.log('Dados enviados:', data);
+    await axios.post(`${API_URL}/users`, data);
+  } catch (error) {
+    console.error('Error saving form data:', error);
+  }
+};
+
+
+const getSavedFormData = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/users`);
+    return response.data;
+  } catch (error) {
+    console.error('Error getting saved form data:', error);
+    return null;
+  }
+};
 // Componente FormCadastro para cadastrar os usuários
 const FormCadastro = ({ setSubmitted: setParentSubmitted }) => {
   // Variáveis de estado para controlar o envio do formulário, a exibição do modal e os dados do formulário
@@ -10,16 +33,19 @@ const FormCadastro = ({ setSubmitted: setParentSubmitted }) => {
   const [formData, setFormData] = useState(null);
 
   // Função que lida com o envio do formulário
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let form = new FormData(e.target);
     let object = {};
-    form.forEach((value, key) => { object[key] = value });
-    localStorage.setItem('formData', JSON.stringify(object));
+    form.forEach((value, key) => {
+      object[key] = value;
+    });
+  
+    await saveFormData(object);
     setFormData(object);
     setShowModal(true);
   };
-
+  
   const handleConfirm = () => {
     setShowModal(false);
     setSubmitted(true);
@@ -47,11 +73,16 @@ const FormCadastro = ({ setSubmitted: setParentSubmitted }) => {
   };
 
   useEffect(() => {
-    const savedFormData = localStorage.getItem('formData');
-    if (savedFormData) {
-      setFormData(JSON.parse(savedFormData));
-    }
+    const fetchSavedFormData = async () => {
+      const savedFormData = await getSavedFormData();
+      if (savedFormData) {
+        setFormData(savedFormData);
+      }
+    };
+  
+    fetchSavedFormData();
   }, []);
+  
 
   return submitted ? (
     <div className="success-message">
