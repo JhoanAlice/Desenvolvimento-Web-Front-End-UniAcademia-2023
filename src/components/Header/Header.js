@@ -47,22 +47,22 @@ function Header(props) {
             <span>Lojas</span>
             <ul className={styles.dropdownMenu}>
               <li>
-                <Link to="/loja1">Loja 1</Link>
+                <Link to="/loja1">oBoticario</Link>
               </li>
               <li>
-                <Link to="/loja2">Loja 2</Link>
+                <Link to="/loja2">Rolex</Link>
               </li>
               <li>
-                <Link to="/loja3">Loja 3</Link>
+                <Link to="/loja3">Nike</Link>
               </li>
               <li>
-                <Link to="/loja4">Loja 4</Link>
+                <Link to="/loja4">Ponto Frio</Link>
               </li>
               <li>
-                <Link to="/loja5">Loja 5</Link>
+                <Link to="/loja5">Lacoste</Link>
               </li>
               <li>
-                <Link to="/loja6">Loja 6</Link>
+                <Link to="/loja6">Apple</Link>
               </li>
             </ul>
           </li>
