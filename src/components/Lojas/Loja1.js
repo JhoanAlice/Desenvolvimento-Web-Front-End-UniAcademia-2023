@@ -1,73 +1,82 @@
 import React from 'react';
-import Categoria1 from '../Categorias/Categoria1';
-import Categoria2 from '../Categorias/Categoria2';
-import Categoria3 from '../Categorias/Categoria3';
-import Categoria4 from '../Categorias/Categoria4';
-import Categoria5 from '../Categorias/Categoria5';
-import Categoria6 from '../Categorias/Categoria6';
 import './Loja.css';
+import perfumeImg from './images/perfume.jpg';
+import perfume2Img from './images/perfume2.jpg';
+import perfume3Img from './images/perfume3.jpg';
+import desodorante from './images/desodorante.jpg';
+import desodorante2 from './images/desodorante2.jpg';
+import desodorante3 from './images/desodorante3.jpg';
 
 function Loja1() {
   return (
     <div>
-      <h1>Loja 1</h1>
+      <h1>oBoticário</h1>
       <div className="categorias-container">
         <div className="categoria-row">
           <div className="categoria-card">
             <img
-              src="caminho-da-imagem-da-categoria1"
+              src={perfumeImg}
               alt="Categoria 1"
               className="categoria-image"
             />
-            <h3>Categoria 1</h3>
-            <p>Conteúdo da Categoria 1</p>
+            <h3>Perfume Gold</h3>
+            <p>Perfume Feminino 150ml</p>
+            <p>R$150,00</p>
           </div>
           <div className="categoria-card">
             <img
-              src="caminho-da-imagem-da-categoria2"
+              src={perfume2Img}
               alt="Categoria 2"
               className="categoria-image"
             />
-            <h3>Categoria 2</h3>
-            <p>Conteúdo da Categoria 2</p>
+            <h3>Perfume Blue</h3>
+            <p>Perfume Masculino 120ml</p>
+            <p>R$120,00</p>
           </div>
           <div className="categoria-card">
             <img
-              src="caminho-da-imagem-da-categoria3"
+              src={perfume3Img}
               alt="Categoria 3"
               className="categoria-image"
             />
-            <h3>Categoria 3</h3>
-            <p>Conteúdo da Categoria 3</p>
+            <h3>Perfume Candy</h3>
+            <p>Perfume Natural</p>
+            <p>R$160,00</p>
           </div>
         </div>
         <div className="categoria-row">
           <div className="categoria-card">
             <img
-              src="caminho-da-imagem-da-categoria4"
+              src={desodorante}
               alt="Categoria 4"
               className="categoria-image"
             />
-            <h3>Categoria 4</h3>
-            <p>Conteúdo da Categoria 4</p>
+            <h3>Desodorante Belk</h3>
+            <p></p>
+            <p></p>
+            <p>R$80,00</p>
           </div>
           <div className="categoria-card">
             <img
-              src="caminho-da-imagem-da-categoria5"
+              src={desodorante2}
               alt="Categoria 5"
               className="categoria-image"
             />
-            <h3>Categoria 5</h3>
-            <p>Conteúdo da Categoria 5</p>
+            <h3>Desodorante Soft</h3>
+            <p></p>
+            <p></p>
+            <p>R$50,00</p>
           </div>
           <div className="categoria-card">
             <img
-              src="caminho-da-imagem-da-categoria6"
+              src={desodorante3}
               alt="Categoria 6"
               className="categoria-image"
             />
-            <h3>Categoria 6</h3>
-            <p>Conteúdo da Categoria 6</p>
+            <h3>Desodorante Black</h3>
+            <p></p>
+            <p></p>
+            <p>R$100,00</p>
           </div>
         </div>
       </div>

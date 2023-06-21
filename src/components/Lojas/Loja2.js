@@ -1,25 +1,80 @@
 import React from 'react';
-import Categoria1 from '../Categorias/Categoria1';
-import Categoria2 from '../Categorias/Categoria2';
-import Categoria3 from '../Categorias/Categoria3';
-import Categoria4 from '../Categorias/Categoria4';
-import Categoria5 from '../Categorias/Categoria5';
-import Categoria6 from '../Categorias/Categoria6';
+import './Loja.css';
+import relogiorolex from './images/relogiorolex.jpg';
+import relogiorolex2 from './images/relogiorolex2.jpg';
+import relogiopreto from './images/relogiopreto.jpg';
+import relogioazul from './images/Relogioazul.jpg';
+import relogioverde from './images/relogioverde.jpg';
+import relogiocouro from './images/relogiocouro.jpg';
 
 function Loja2() {
   return (
     <div>
-      <h1>Loja 2</h1>
+      <h1>Rolex</h1>
       <div className="categorias-container">
         <div className="categoria-row">
-          <Categoria1 />
-          <Categoria2 />
-          <Categoria3 />
+          <div className="categoria-card">
+            <img
+              src={relogiorolex}
+              alt="Categoria 1"
+              className="categoria-image"
+            />
+            <h3>Relógio Gold</h3>
+            <p></p>
+            <p>R$250,00</p>
+          </div>
+          <div className="categoria-card">
+            <img
+              src={relogiorolex2}
+              alt="Categoria 2"
+              className="categoria-image"
+            />
+            <h3>Relógio Silver</h3>
+            <p></p>
+            <p>R$280,00</p>
+          </div>
+          <div className="categoria-card">
+            <img
+              src={relogiopreto}
+              alt="Categoria 3"
+              className="categoria-image"
+            />
+            <h3>Relógio Dark</h3>
+            <p></p>
+            <p>R$320,00</p>
+          </div>
         </div>
         <div className="categoria-row">
-          <Categoria4 />
-          <Categoria5 />
-          <Categoria6 />
+          <div className="categoria-card">
+            <img
+              src={relogioazul}
+              alt="Categoria 4"
+              className="categoria-image"
+            />
+            <h3>Relógio Blue</h3>
+            <p></p>
+            <p>R$100,00</p>
+          </div>
+          <div className="categoria-card">
+            <img
+              src={relogioverde}
+              alt="Categoria 5"
+              className="categoria-image"
+            />
+            <h3>Relógio Esmeralda</h3>
+            <p></p>
+            <p>R$400,00</p>
+          </div>
+          <div className="categoria-card">
+            <img
+              src={relogiocouro}
+              alt="Categoria 6"
+              className="categoria-image"
+            />
+            <h3>Relógio Oxs</h3>
+            <p></p>
+            <p>RS$250,00</p>
+          </div>
         </div>
       </div>
     </div>
